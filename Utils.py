@@ -28,6 +28,7 @@ def define_scope(function, scope=None, *args, **kwargs):
     """
     attribute = '_cache_' + function.__name__
     name = scope or function.__name__
+
     @property
     @functools.wraps(function)
     def decorator(self):
